@@ -5,8 +5,11 @@
 """
 def solution(s):
     stack = []
-    if(s[0] == ')'):
+    if(s[0] == ')'): #예외처리
         return False
+    elif len(s)%2 == 1:
+        return False
+    
     for x in range(0,len(s)):
         if (s[x] == '('):
             stack.append('(')
